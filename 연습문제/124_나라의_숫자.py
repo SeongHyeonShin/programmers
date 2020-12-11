@@ -17,23 +17,3 @@ def solution(n):
 if __name__ == '__main__':
     n = 10
     print(solution(n))
-
-
-
-#
-from collections import deque
-
-
-def solution(prices):
-    prices = deque(prices)
-    ans = []
-    while len(prices):
-        count = 0
-        p = prices.popleft()
-        for price in prices:
-            count += 1
-            if p > price: break
-
-        ans.append(count)
-
-    return ans
