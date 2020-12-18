@@ -3,9 +3,7 @@
 
 
 def solution(n):
-    answer = []
-    result = [[0] * n for _ in range(n)]
-
+    result = [[0] * (i + 1) for i in range(n)]
     x, y = -1, 0
     shift = [[1, 0], [0, 1], [-1, -1]]
     count = 1
@@ -19,11 +17,7 @@ def solution(n):
             result[x][y] = count
             count += 1
 
-    for row in result:
-        for v in row:
-            if v != 0: answer.append(v)
-
-    return answer
+    return [v for row in result for v in row]
 
 
 # Press the green button in the gutter to run the script.
