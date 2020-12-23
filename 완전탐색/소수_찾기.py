@@ -4,7 +4,7 @@ from itertools import permutations
 from math import sqrt
 
 
-def sieveofEratoshenes(N=0):
+def sieveofEratosthenes(N=0):
     prime_n = [i for i in range(N+1)]
 
     for i in range(2, int(sqrt(len(prime_n)))):
@@ -18,7 +18,7 @@ def sieveofEratoshenes(N=0):
 
 def solution(numbers):
     perm = set([int(''.join(p)) for i in range(1, len(numbers) + 1) for p in permutations(numbers, i)])
-    prime_number = sieveofEratoshenes(max(perm))
+    prime_number = sieveofEratosthenes(max(perm))
     return sum([1 for p in perm if prime_number[p]])
 
 
