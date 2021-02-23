@@ -4,7 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 from collections import deque
 
-
+tmp = 0
 """
 # best
 def solution(board, moves):
